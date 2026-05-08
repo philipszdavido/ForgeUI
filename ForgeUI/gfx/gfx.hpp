@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include <stdint.h>
+#include <math.h>
 
 #define WIDTH  800
 #define HEIGHT 600

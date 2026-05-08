@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4F14043B2F4470F300EEB096 /* SDL3.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F14043A2F4470F300EEB096 /* SDL3.xcframework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		4F1404262F443E4100EEB096 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -20,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		4F1404282F443E4100EEB096 /* ForgeUI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ForgeUI; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F14043A2F4470F300EEB096 /* SDL3.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SDL3.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -35,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F14043B2F4470F300EEB096 /* SDL3.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +52,7 @@
 			children = (
 				4F14042A2F443E4100EEB096 /* ForgeUI */,
 				4F1404292F443E4100EEB096 /* Products */,
+				4F14043A2F4470F300EEB096 /* SDL3.xcframework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -246,20 +253,52 @@
 		4F1404302F443E4100EEB096 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				AUTOMATION_APPLE_EVENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AVHBF8657S;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PHOTO_LIBRARY = NO;
+				"HEADER_SEARCH_PATHS[arch=*]" = /opt/homebrew/include;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /opt/homebrew/lib;
+				"OTHER_LDFLAGS[arch=*]" = "-lSDL2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUNTIME_EXCEPTION_ALLOW_DYLD_ENVIRONMENT_VARIABLES = NO;
+				RUNTIME_EXCEPTION_ALLOW_JIT = NO;
+				RUNTIME_EXCEPTION_ALLOW_UNSIGNED_EXECUTABLE_MEMORY = NO;
+				RUNTIME_EXCEPTION_DEBUGGING_TOOL = NO;
+				RUNTIME_EXCEPTION_DISABLE_EXECUTABLE_PAGE_PROTECTION = NO;
+				RUNTIME_EXCEPTION_DISABLE_LIBRARY_VALIDATION = YES;
 			};
 			name = Debug;
 		};
 		4F1404312F443E4100EEB096 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				AUTOMATION_APPLE_EVENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AVHBF8657S;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PHOTO_LIBRARY = NO;
+				"HEADER_SEARCH_PATHS[arch=*]" = /opt/homebrew/include;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /opt/homebrew/lib;
+				"OTHER_LDFLAGS[arch=*]" = "-lSDL2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUNTIME_EXCEPTION_ALLOW_DYLD_ENVIRONMENT_VARIABLES = NO;
+				RUNTIME_EXCEPTION_ALLOW_JIT = NO;
+				RUNTIME_EXCEPTION_ALLOW_UNSIGNED_EXECUTABLE_MEMORY = NO;
+				RUNTIME_EXCEPTION_DEBUGGING_TOOL = NO;
+				RUNTIME_EXCEPTION_DISABLE_EXECUTABLE_PAGE_PROTECTION = NO;
+				RUNTIME_EXCEPTION_DISABLE_LIBRARY_VALIDATION = YES;
 			};
 			name = Release;
 		};
