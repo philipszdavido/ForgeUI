@@ -16,19 +16,31 @@ void clear(uint32_t color)
         framebuffer[i] = color;
 }
 
-void put_pixel(int x, int y, uint32_t color)
-{
-    if (x < 0 || y < 0 || x >= WIDTH || y >= HEIGHT)
-        return;
+//void put_pixel(int x, int y, uint32_t color)
+//{
+//    if (x < 0 || y < 0 || x >= WIDTH || y >= HEIGHT)
+//        return;
+//
+//    framebuffer[y * WIDTH + x] = color;
+//}
+//
+//void draw_rect(int x, int y, int w, int h, uint32_t color)
+//{
+//    for (int i = 0; i < w; i++)
+//        for (int j = 0; j < h; j++)
+//            put_pixel(x + i, y + j, color);
+//}
 
-    framebuffer[y * WIDTH + x] = color;
+void put_pixel(int x, int y, uint32_t pixel) {
+    framebuffer[y * WIDTH + x] = pixel;
 }
 
-void draw_rect(int x, int y, int w, int h, uint32_t color)
-{
-    for (int i = 0; i < w; i++)
-        for (int j = 0; j < h; j++)
-            put_pixel(x + i, y + j, color);
+void draw_rect(int x, int y, int width, int height, uint32_t pixel) {
+    for (int i = 0; i < height; i++) {
+        for (int j = 0; j < width; j++) {
+            put_pixel(x + j, i + y, pixel);
+        }
+    }
 }
 
 void draw_line(int x0, int y0, int x1, int y1, uint32_t color)
